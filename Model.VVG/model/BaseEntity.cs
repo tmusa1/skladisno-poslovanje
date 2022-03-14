@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Model.VVG.model
 {
-    internal class BaseEntity
+    public abstract class BaseEntity
     {
         [Key]
         [Column("id")]
