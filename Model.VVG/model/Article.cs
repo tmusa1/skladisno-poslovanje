@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Model.VVG.model
 {
-    internal class DeliveryMethod : BaseEntity
+    internal class Article : BaseEntity
     {
+        public string Name { get; set; }
+        public string Description { get; set; }
+
     }
 }

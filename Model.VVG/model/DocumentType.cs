@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Model.VVG.model
 {
-    internal class Product : BaseEntity
+    internal class DocumentType : BaseEntity
     {
+        public string Name { get; set; }
+
     }
 }
