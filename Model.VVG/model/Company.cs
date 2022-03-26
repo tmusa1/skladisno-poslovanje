@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model.VVG.model
 {
-    internal class Category : BaseEntity
+    internal class Company : BaseEntity
     {
-        public string Name { get; set; }
     }
 }
