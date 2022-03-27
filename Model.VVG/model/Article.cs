@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace Model.VVG.model
 {
     [Table("article")]
-    internal class Article : BaseEntity
+    public class Article : BaseEntity
     {
         [JsonPropertyName("name")]
         [Column("name")]

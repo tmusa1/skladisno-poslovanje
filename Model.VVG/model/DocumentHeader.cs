@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace Model.VVG.model
 {
     [Table("document_header")]
-    internal class DocumentHeader : BaseEntity
+    public class DocumentHeader : BaseEntity
     {
         [JsonPropertyName("date_from")]
         [Column("date_from")]

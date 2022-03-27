@@ -9,7 +9,7 @@ using System.Text.Json.Serialization;
 namespace Model.VVG.model
 {
     [Table("document_type")]
-    internal class DocumentType : BaseEntity
+    public class DocumentType : BaseEntity
     {
         [JsonPropertyName("name")]
         [Column("name")]

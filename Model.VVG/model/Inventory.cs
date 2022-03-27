@@ -9,7 +9,7 @@ using System.Text.Json.Serialization;
 namespace Model.VVG.model
 {
     [Table("inventory")]
-    internal class Inventory : BaseEntity
+    public class Inventory : BaseEntity
     {
         [JsonPropertyName("quantity_avail")]
         [Column("quantity_avail")]
