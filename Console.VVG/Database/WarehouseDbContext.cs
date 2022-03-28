@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Model.VVG.model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace Console.VVG.Database
     {
         public WarehouseDbContext()
         {
-            //AppContext.SetSwitch
+            AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
         }
 
         //public WarehouseDbContext(DbContextOptions<WarehouseDbContext> options)
@@ -19,16 +20,15 @@ namespace Console.VVG.Database
         //{
         //}
 
-        public DbSet<Article> Article { get; set; }
-        public DbSet<Company> Company { get; set; }
-        public DbSet<DocumentHeader> DocumentHeader { get; set; }
-        public DbSet<DocumentItems> DocumentItems { get; set; }
-        public DbSet<DocumentType> DocumentType { get; set; }
-        public DbSet<Inventory> Inventory { get; set; }
+        public DbSet<Article>? Article { get; set; }
+        public DbSet<Company>? Company { get; set; }
+        public DbSet<DocumentHeader>? DocumentHeader { get; set; }
+        public DbSet<DocumentItems>? DocumentItems { get; set; }
+        public DbSet<DocumentType>? DocumentType { get; set; }
+        public DbSet<Inventory>? Inventory { get; set; }
+        public DbSet<Warehouse>? Warehouse { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            base.OnConfiguring(optionsBuilder);
-        }
+            => optionsBuilder.UseNpgsql(@"Host=localhost;Port=5432;Database=warehouse;Username=postgres;Password=postgres");
     }
 }

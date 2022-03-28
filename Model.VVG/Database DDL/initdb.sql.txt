@@ -91,7 +91,6 @@ CREATE TABLE IF NOT EXISTS public.inventory
 	  REFERENCES warehouse(id)
 );
 
-
 INSERT INTO public.company VALUES (1,'Company 1', 'Address 1', '095777001');
 INSERT INTO public.company VALUES (1,'Company 2', 'Address 2', '095777002');
 INSERT INTO public.company VALUES (1,'Company 3', 'Address 3', '095777003');
