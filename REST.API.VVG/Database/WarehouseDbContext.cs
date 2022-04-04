@@ -9,11 +9,6 @@ namespace REST.API.VVG.Database
             AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
         }
 
-        //public WarehouseDbContext(DbContextOptions<WarehouseDbContext> options)
-        //    : base(options)
-        //{
-        //}
-
         public DbSet<Article>? Article { get; set; }
         public DbSet<Company>? Company { get; set; }
         public DbSet<DocumentHeader>? DocumentHeader { get; set; }
