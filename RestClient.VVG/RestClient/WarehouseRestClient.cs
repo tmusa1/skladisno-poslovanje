@@ -13,9 +13,9 @@ namespace RestClient.VVG.RestClient
         {
         }
 
-        public void bankAccountByPersonId(int personId)
+        public void articleByCompanyId(int companyId)
         {
-            Task<HttpResponseMessage> responseTask = base.client.GetAsync("BankAccount/Person/" + personId);
+            Task<HttpResponseMessage> responseTask = base.client.GetAsync("Article/Company/" + companyId);
 
             responseTask.Wait();
 

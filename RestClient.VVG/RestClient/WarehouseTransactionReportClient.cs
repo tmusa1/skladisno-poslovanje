@@ -3,14 +3,14 @@ using System.Text.Json;
 
 namespace RestClient.VVG.RestClient
 {
-    public class WarehouseReportClient<T> : RestClient<T>
+    public class WarehouseTransactionReportClient<T> : RestClient<T>
     {
-        public WarehouseReportClient() : base("") { }
+        public WarehouseTransactionReportClient() : base("") { }
 
         public void warehouseTransactionReport()
         {
             // *?
-            Task<HttpResponseMessage> responseTask = base.client.GetAsync("BankTransaction/getTransactionReport");
+            Task<HttpResponseMessage> responseTask = base.client.GetAsync("WarehouseTransaction/getTransactionReport");
 
             responseTask.Wait();
 
