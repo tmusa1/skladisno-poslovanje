@@ -66,7 +66,7 @@ CREATE TABLE IF NOT EXISTS public.document_items
     quantity integer NOT NULL,
     description character varying(100) COLLATE pg_catalog."default" NOT NULL,
     order_number integer NOT NULL,
-    price NUMERIC(5,2)
+    price NUMERIC(5,2),
     CONSTRAINT "PK_document_items" PRIMARY KEY (id),
     CONSTRAINT fk_document_header
       FOREIGN KEY(document_header_id) 
