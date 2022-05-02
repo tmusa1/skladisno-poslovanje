@@ -62,7 +62,6 @@ namespace REST.API.VVG.Controllers
             }
 
             return responseBundle;
-
         }
     }
 }
