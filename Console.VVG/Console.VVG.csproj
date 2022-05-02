@@ -9,12 +9,11 @@
 
   <ItemGroup>
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.3" />
-    <PackageReference Include="Npgsql.Json.NET" Version="6.0.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Model.VVG\Model.VVG.csproj" />
     <ProjectReference Include="..\RestClient.VVG\RestClient.VVG.csproj" />
+    <ProjectReference Include="..\WarehouseDataContext\WarehouseDataContext.csproj" />
   </ItemGroup>
 
 </Project>

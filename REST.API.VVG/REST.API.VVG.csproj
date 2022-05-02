@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Model.VVG\Model.VVG.csproj" />
+    <ProjectReference Include="..\WarehouseDataContext\WarehouseDataContext.csproj" />
   </ItemGroup>
 
 </Project>

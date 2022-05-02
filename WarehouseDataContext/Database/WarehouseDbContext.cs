@@ -1,14 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Model.VVG.model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Console.VVG.Database
+namespace WarehouseDataContext.Database
 {
-    internal class WarehouseDbContext : DbContext
+    public class WarehouseDbContext : DbContext
     {
         public WarehouseDbContext()
         {
@@ -24,6 +19,6 @@ namespace Console.VVG.Database
         public DbSet<Warehouse>? Warehouse { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-            => optionsBuilder.UseNpgsql(@"Host=localhost;Port=5432;Database=warehouse;Username=postgres;Password=postgres");
+           => optionsBuilder.UseNpgsql(@"Host=localhost;Port=5452;Database=wh;Username=postgres;Password=postgres");
     }
 }

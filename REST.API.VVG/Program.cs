@@ -1,6 +1,9 @@
+using WarehouseDataContext.Database;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Add database context
+builder.Services.AddDbContext<WarehouseDbContext>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
